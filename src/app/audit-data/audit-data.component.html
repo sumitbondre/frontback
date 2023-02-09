@@ -1,0 +1,27 @@
+
+
+<form (ngSubmit)="save()">
+
+ID-<input type="text"  [(ngModel)]="this.cs.au.auditid" name="auditid"><br>
+name-<input type="text" [(ngModel)]="this.cs.au.name" name="name"> <br>
+Address-<input type="text" [(ngModel)]="this.cs.au.address" name="address"><br>
+Mobno-<input type="text" [(ngModel)]="this.cs.au.mobno" name="mobno"><br>
+
+<button type="submit">SUBMIT</button>
+
+</form>
+
+
+<table style="border: ;">
+    <th>auditid</th>
+<th>name</th>
+<th>address</th>
+<th>mobno</th>
+
+    <tr *ngFor="let a of auditlist">
+        <td>{{a.auditid}}</td>
+        <td>{{a.name}}</td>
+        <td>{{a.address}}</td>
+        <td>{{a.mobno}}</td>
+    </tr>
+</table>
